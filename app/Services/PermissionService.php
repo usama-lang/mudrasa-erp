@@ -232,6 +232,11 @@ class PermissionService
         // Fire action after syncing permissions
         Hook::doAction(PermissionActionHook::PERMISSIONS_SYNC_AFTER, $createdPermissions);
 
+        // Permissions may have been inserted by migrations via raw DB queries
+        // (bypassing Eloquent's save events), so the cache needs an explicit
+        // flush here rather than relying on findOrCreatePermission() alone.
+        app(\Spatie\Permission\PermissionRegistrar::class)->forgetCachedPermissions();
+
         return $createdPermissions;
     }
 
