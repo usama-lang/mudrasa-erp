@@ -3,6 +3,6 @@
     "DocForge": false,
     "Starter26": false,
     "customform": false,
-    "SchoolManagement": false,
-    "MadrasaFunds": false
+    "SchoolManagement": true,
+    "MadrasaFunds": true
 }
