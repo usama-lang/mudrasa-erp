@@ -1,0 +1,30 @@
+{
+    "name": "laradashboard/schoolmanagement",
+    "description": "",
+    "authors": [
+        {
+            "name": "Lara Dashboard",
+            "email": "admin@laradashboard.com"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [],
+            "aliases": {
+
+            }
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Modules\\SchoolManagement\\": "app/",
+            "Modules\\SchoolManagement\\Database\\Factories\\": "database/factories/",
+            "Modules\\SchoolManagement\\Database\\Seeders\\": "database/seeders/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Modules\\SchoolManagement\\Tests\\": "tests/"
+        }
+    }
+}

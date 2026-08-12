@@ -1,0 +1,19 @@
+{
+    "name": "MadrasaFunds",
+    "alias": "madrasafunds",
+    "title": "Madrasa Funds",
+    "description": "Fund and donation management system for a Madrasa with bilingual receipts and reports.",
+    "keywords": ["madrasa", "funds", "donations", "fees", "receipts"],
+    "category": "addon",
+    "priority": 50,
+    "providers": [
+        "Modules\\MadrasaFunds\\Providers\\MadrasaFundsServiceProvider"
+    ],
+    "files": [],
+    "icon": "lucide:hand-coins",
+    "logo_image": null,
+    "banner_image": null,
+    "version": "1.0.0",
+    "author": "Lara Dashboard",
+    "pricing": "free"
+}

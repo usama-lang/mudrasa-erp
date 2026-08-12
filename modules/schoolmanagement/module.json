@@ -1,0 +1,19 @@
+{
+    "name": "SchoolManagement",
+    "alias": "schoolmanagement",
+    "title": "SchoolManagement",
+    "description": "",
+    "keywords": [],
+    "category": "addon",
+    "priority": 50,
+    "providers": [
+        "Modules\\SchoolManagement\\Providers\\SchoolManagementServiceProvider"
+    ],
+    "files": [],
+    "icon": "lucide:box",
+    "logo_image": null,
+    "banner_image": null,
+    "version": "1.0.0",
+    "author": "Lara Dashboard",
+    "pricing": "free"
+}

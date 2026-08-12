@@ -1,0 +1,30 @@
+{
+    "name": "laradashboard/madrasafunds",
+    "description": "Fund and donation management system for a Madrasa.",
+    "authors": [
+        {
+            "name": "Lara Dashboard",
+            "email": "admin@laradashboard.com"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [],
+            "aliases": {
+
+            }
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Modules\\MadrasaFunds\\": "app/",
+            "Modules\\MadrasaFunds\\Database\\Factories\\": "database/factories/",
+            "Modules\\MadrasaFunds\\Database\\Seeders\\": "database/seeders/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Modules\\MadrasaFunds\\Tests\\": "tests/"
+        }
+    }
+}

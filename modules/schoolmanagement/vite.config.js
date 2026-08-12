@@ -1,0 +1,34 @@
+import { defineConfig } from 'vite';
+import laravel from 'laravel-vite-plugin';
+import tailwindcss from '@tailwindcss/vite';
+import path from 'path';
+
+// Dual build mode: development builds to public/, distribution builds to dist/
+const isDistBuild = process.env.MODULE_DIST_BUILD === 'true';
+const distOutDir = path.resolve(__dirname, 'dist/build-schoolmanagement');
+const devOutDir = path.resolve(__dirname, '../../public/build-schoolmanagement');
+
+export default defineConfig({
+    build: {
+        outDir: isDistBuild ? distOutDir : devOutDir,
+        emptyOutDir: true,
+        manifest: true,
+    },
+    plugins: [
+        laravel({
+            publicDirectory: '../../public',
+            buildDirectory: 'build-schoolmanagement',
+            input: [
+                __dirname + '/resources/assets/css/app.css',
+                __dirname + '/resources/assets/js/app.js',
+            ],
+            refresh: true,
+        }),
+        tailwindcss(),
+    ],
+    resolve: {
+        alias: [
+            { find: '~', replacement: path.resolve(__dirname, 'node_modules') },
+        ],
+    },
+});
