@@ -43,13 +43,10 @@ class UserSeeder extends Seeder
             'email_verified_at' => now(),
         ]);
 
-        // Run factory to create additional users with unique details.
-        User::factory()->count(500)->create();
-
         // Assign roles to core users (roles created in permission migration)
         $this->assignRolesToUsers($superadmin, $admin, $subscriber);
 
-        $this->command->info('Users table seeded with 503 users!');
+        $this->command->info('Users table seeded with 3 users!');
     }
 
     /**
